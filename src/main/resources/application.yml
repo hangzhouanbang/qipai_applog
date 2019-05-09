@@ -1,0 +1,30 @@
+spring:
+  data:
+    mongodb:
+      #uri: mongodb://localhost:27017/qipai_applog
+
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+          zk-nodes: localhost:2181
+          minPartitionCount: 1
+          autoCreateTopics: true
+          autoAddPartitions: false
+        bindings:
+          
+      bindings:
+        
+  application:
+    name: qipai-applog
+server:
+  port: 86
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  #instance:
+    #prefer-ip-address: true
+    #instance-id: http://172.16.21.51:96
